@@ -8,11 +8,11 @@
 HardwareSerial MySerial(2); // UART2
 
 // WiFi credentials
-const char* WIFI_SSID     = "Prime";
-const char* WIFI_PASSWORD = "Prime@321";
+const char* WIFI_SSID     = "WIFI NMAE";
+const char* WIFI_PASSWORD = "WIFI PASSWORD";
 
 // Firebase
-const char* DATABASE_URL = "https://aqi-hackathon-150925-default-rtdb.asia-southeast1.firebasedatabase.app";
+const char* DATABASE_URL = "URL";
 const char* DB_AUTH = ""; 
 
 // Sensor pins
@@ -71,7 +71,7 @@ float readHumidity() {
   return isnan(h) ? -1 : h;
 }
 
-// --- WiFi & Firebase ---
+//  WiFi & Firebase 
 void connectWiFi() {
   Serial.print("Connecting to WiFi ");
   WiFi.mode(WIFI_STA);
@@ -112,7 +112,7 @@ bool sendToFirebase(const String &path, const String &jsonPayload) {
   }
 }
 
-// --- Setup ---
+// Setup 
 void setup() {
   Serial.begin(115200);
   delay(100);
